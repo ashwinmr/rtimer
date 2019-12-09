@@ -22,9 +22,7 @@
         ],
         "icon": "build_resources/icons/main_icon.png",
         "win": {
-            "target": "appx",
-            "certificateFile": "build_resources/selfsigncert.pfx",
-            "certificatePassword": "password"
+            "target": "appx"
         },
         "linux": {
             "category": ""
