@@ -43,7 +43,7 @@ function Reset() {
 // Function to handle end of timer
 function End() {
     Play_Pause()
-    ipc.send('timer_end')
+    ipcRenderer.send('timer_end')
 }
 
 // Function to update the timer every second
