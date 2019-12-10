@@ -96,3 +96,40 @@ button:hover {
     -webkit-mask-image: url('../ui/play_button.svg');
     float: left;
 }
+
+
+/* Offline font */
+
+
+/* orbitron-regular - latin */
+
+@font-face {
+    font-family: 'Orbitron';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/orbitron-v14-latin-regular.eot');
+    /* IE9 Compat Modes */
+    src: local(''), url('../fonts/orbitron-v14-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('../fonts/orbitron-v14-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+    url('../fonts/orbitron-v14-latin-regular.woff') format('woff'), /* Modern Browsers */
+    url('../fonts/orbitron-v14-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+    url('../fonts/orbitron-v14-latin-regular.svg#Orbitron') format('svg');
+    /* Legacy iOS */
+}
+
+
+/* orbitron-700 - latin */
+
+@font-face {
+    font-family: 'Orbitron';
+    font-style: normal;
+    font-weight: 700;
+    src: url('../fonts/orbitron-v14-latin-700.eot');
+    /* IE9 Compat Modes */
+    src: local(''), url('../fonts/orbitron-v14-latin-700.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('../fonts/orbitron-v14-latin-700.woff2') format('woff2'), /* Super Modern Browsers */
+    url('../fonts/orbitron-v14-latin-700.woff') format('woff'), /* Modern Browsers */
+    url('../fonts/orbitron-v14-latin-700.ttf') format('truetype'), /* Safari, Android, iOS */
+    url('../fonts/orbitron-v14-latin-700.svg#Orbitron') format('svg');
+    /* Legacy iOS */
+}
