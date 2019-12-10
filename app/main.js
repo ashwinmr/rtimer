@@ -7,10 +7,6 @@ const Debug = {
     DevTool: true,
 }
 
-// Use the example cpp addon
-const example_addon = require('./build/Release/example_addon.node');
-console.log('cpp addon: ', example_addon.hello("from cpp"));
-
 // Start the program when app is ready
 app.on('ready', function createWindow() {
     // Create the browser window.
