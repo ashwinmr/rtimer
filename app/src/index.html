@@ -6,10 +6,21 @@
     <meta charset="utf-8" />
     <title id="title">Electron Template</title>
     <link rel="stylesheet" href="../assets/css/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Orbitron:400,700" rel="stylesheet">
 </head>
 
 <body>
-    <p id="hello">Hello Electron</p>
+    <div id="reset_container">
+        <button id="reset_button"></button>
+    </div>
+    <div id="timer_container">
+        <input id="minutes" type="number" min="0" max="60" value="00" maxlength="2" />
+        <span id="separator">:</span>
+        <input id="seconds" type="number" min="0" max="59" value="00" maxlength="2" />
+    </div>
+    <div id="play_pause_container">
+        <button id="play_pause_button"></button>
+    </div>
 
     <script src="index.js"></script>
 </body>

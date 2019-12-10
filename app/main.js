@@ -1,4 +1,4 @@
-const { app, BrowserWindow, Menu, ipcMain } = require('electron')
+const { app, BrowserWindow, Menu, Tray, ipcMain } = require('electron')
 const path = require('path')
 const url = require('url')
 
@@ -13,18 +13,13 @@ app.on('ready', function createWindow() {
     win = new BrowserWindow({
         show: false, // Show and maximize later
         icon: path.join(__dirname, 'assets', 'icons', 'main_icon.png'),
-        resizable: true,
+        resizable: false,
+        width: 450,
+        height: 125,
         webPreferences: {
             nodeIntegration: true
         }
     })
-
-    // Load the index.html of the app.
-    win.loadURL(url.format({
-        pathname: path.join(__dirname, 'src', 'index.html'),
-        protocol: 'file:',
-        slashes: true
-    }))
 
     // Create the menu
     const menu = Menu.buildFromTemplate([{
@@ -59,6 +54,54 @@ app.on('ready', function createWindow() {
 
     // Set menu
     Menu.setApplicationMenu(menu)
+
+    // Create a tray icon
+    tray = new Tray(path.join(__dirname, 'assets', 'icons', 'main_icon.png'))
+
+    // Create a conext menu for the tray
+    const tray_menu = Menu.buildFromTemplate([{
+            label: 'Restore',
+            click() {
+                win.show()
+            }
+        },
+        {
+            label: 'Quit',
+            click() {
+                win.close()
+            }
+        }
+    ])
+
+    // Set the tray menu and tooltip
+    tray.setContextMenu(tray_menu)
+    tray.setToolTip(app.name)
+
+    // Load the index.html of the app.
+    win.loadURL(url.format({
+        pathname: path.join(__dirname, 'src', 'index.html'),
+        protocol: 'file:',
+        slashes: true
+    }))
+
+    // Hide the window when minimized
+    win.on('minimize', function(event) {
+        event.preventDefault();
+        win.hide();
+    });
+
+    // Show the window when the tray icon is double clicked
+    tray.on('double-click', () => {
+        win.show()
+    })
+
+    // When the timer end is received from index page, show the window
+    // Set it always on top and then disable on top after 1 seconds
+    ipcMain.on('timer_end', () => {
+        win.show()
+        win.setAlwaysOnTop(true)
+        setTimeout(() => { win.setAlwaysOnTop(false) }, 1000)
+    })
 
     // Perform actions after window is loaded
     win.webContents.on('did-finish-load', () => {
