@@ -1,7 +1,7 @@
 {
-    "name": "electron_template",
+    "name": "rtimer",
     "version": "1.0.0",
-    "description": "Description",
+    "description": "A simple timer",
     "repository": {},
     "main": "main.js",
     "scripts": {
