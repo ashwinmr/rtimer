@@ -87,8 +87,9 @@ app.on('ready', function createWindow() {
 
     // Hide the window when minimized
     win.on('minimize', function(event) {
-        event.preventDefault();
-        win.hide();
+        // This is causing crash when win.show() is used while app is not in focus.
+        // event.preventDefault();
+        // win.hide();
     });
 
     // Show the window when the tray icon is double clicked
