@@ -31,7 +31,8 @@
             "identityName": "37353raotech.rtimer",
             "publisher": "CN=FCA45FA4-92B8-42C6-A970-7C1960C49FB5",
             "publisherDisplayName": "raotech",
-            "applicationId": "rtimer"
+            "applicationId": "rtimer",
+            "displayName": "r timer"
         }
     },
     "keywords": [],
