@@ -1,7 +1,7 @@
 {
-    "name": "electron_template",
+    "name": "rtimer",
     "version": "1.0.0",
-    "description": "Description",
+    "description": "A simple timer",
     "repository": {},
     "main": "main.js",
     "scripts": {
@@ -28,14 +28,14 @@
             "category": ""
         },
         "appx": {
-            "identityName": "000pub.app",
-            "publisher": "CN=000",
-            "publisherDisplayName": "pub",
-            "applicationId": "app"
+            "identityName": "37353raotech.rtimer",
+            "publisher": "CN=FCA45FA4-92B8-42C6-A970-7C1960C49FB5",
+            "publisherDisplayName": "raotech",
+            "applicationId": "rtimer"
         }
     },
     "keywords": [],
-    "author": "",
+    "author": "raotech",
     "license": "MIT",
     "dependencies": {
         "node-addon-api": "^1.7.1"

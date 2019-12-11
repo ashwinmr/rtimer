@@ -1,1 +1,135 @@
-﻿
+﻿html {
+    height: 100%;
+    background-color: #ff6a00;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    display: table;
+    overflow: hidden;
+}
+
+
+/* The main constainer for timer numbers */
+
+#timer_container {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    font-family: 'Orbitron', sans-serif;
+    font-weight: bold;
+    color: #ffd800;
+    font-size: 50px;
+    white-space: nowrap;
+}
+
+
+/* All inputs used in the timer */
+
+input {
+    font-family: inherit;
+    font-weight: inherit;
+    color: inherit;
+    font-size: inherit;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    padding: 0;
+}
+
+
+/* Remove spin buttons from input boxes */
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+}
+
+#minutes {
+    text-align: right;
+}
+
+#seconds {
+    text-align: left;
+}
+
+
+/* All buttons . Mask is used to set the icon */
+
+button {
+    background-color: #ffd800;
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    height: 50px;
+    width: 50px;
+    margin: 5px;
+}
+
+
+/* All buttons when hovered over */
+
+button:hover {
+    background-color: #00ccff;
+}
+
+#reset_container {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+#reset_button {
+    -webkit-mask-image: url('../ui/reset_button.svg');
+    float: right;
+}
+
+#play_pause_container {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+#play_pause_button {
+    -webkit-mask-image: url('../ui/play_button.svg');
+    float: left;
+}
+
+
+/* Offline font */
+
+
+/* orbitron-regular - latin */
+
+@font-face {
+    font-family: 'Orbitron';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/orbitron-v14-latin-regular.eot');
+    /* IE9 Compat Modes */
+    src: local(''), url('../fonts/orbitron-v14-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('../fonts/orbitron-v14-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+    url('../fonts/orbitron-v14-latin-regular.woff') format('woff'), /* Modern Browsers */
+    url('../fonts/orbitron-v14-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+    url('../fonts/orbitron-v14-latin-regular.svg#Orbitron') format('svg');
+    /* Legacy iOS */
+}
+
+
+/* orbitron-700 - latin */
+
+@font-face {
+    font-family: 'Orbitron';
+    font-style: normal;
+    font-weight: 700;
+    src: url('../fonts/orbitron-v14-latin-700.eot');
+    /* IE9 Compat Modes */
+    src: local(''), url('../fonts/orbitron-v14-latin-700.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('../fonts/orbitron-v14-latin-700.woff2') format('woff2'), /* Super Modern Browsers */
+    url('../fonts/orbitron-v14-latin-700.woff') format('woff'), /* Modern Browsers */
+    url('../fonts/orbitron-v14-latin-700.ttf') format('truetype'), /* Safari, Android, iOS */
+    url('../fonts/orbitron-v14-latin-700.svg#Orbitron') format('svg');
+    /* Legacy iOS */
+}

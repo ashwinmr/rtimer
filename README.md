@@ -1,12 +1,14 @@
-# Electron Template
+# rtimer
 
-A template for electron apps
+A timer made in electron
 
 ![Screenshot](./screenshots/sc_1.png)
 
 # Features
 
-- Feature
+- Play, pause, restart
+- Manual time entry
+- Minimize to tray
 
 # Getting Started
 
@@ -14,10 +16,6 @@ A template for electron apps
 cd app
 npm install
 npm start
-
-or
-
-download from release tab
 ```
 
 # Build

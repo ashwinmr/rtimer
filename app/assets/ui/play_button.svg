@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <defs>
+    <style>
+      .a {
+        fill: none;
+      }
+    </style>
+  </defs>
+  <title>play_button</title>
+  <g>
+    <rect class="a" y="0.57" width="100" height="100"/>
+    <polygon points="87.42 50.57 19.4 89.84 19.4 11.3 87.42 50.57"/>
+  </g>
+</svg>

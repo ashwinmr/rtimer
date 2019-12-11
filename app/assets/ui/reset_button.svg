@@ -1,0 +1,25 @@
+<svg id="Base" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <defs>
+    <style>
+      .cls-1, .cls-2 {
+        fill: none;
+      }
+
+      .cls-2 {
+        stroke: #000;
+        stroke-miterlimit: 10;
+        stroke-width: 15px;
+      }
+    </style>
+  </defs>
+  <title>reset_button</title>
+  <g>
+    <rect class="cls-1" x="-0.17" y="0.03" width="100" height="100"/>
+    <g id="_Group_" data-name="&lt;Group&gt;">
+      <g>
+        <path class="cls-2" d="M81.27,50.2A31.22,31.22,0,1,1,50,19"/>
+        <polygon points="66.31 54.63 81.27 28.72 96.23 54.63 66.31 54.63"/>
+      </g>
+    </g>
+  </g>
+</svg>
