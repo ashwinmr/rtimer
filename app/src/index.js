@@ -15,7 +15,17 @@ var Reset_Button = document.getElementById("reset_button")
 /* Function to set the global minutes and also update the minutes element with 2 digits */
 function Set_Minutes(minutes) {
     minutes = parseInt(minutes)
+
+    // Validate minutes
+    if (minutes > 60) {
+        minutes = 60
+    }
+    if (minutes < 0) {
+        minutes = 0
+    }
     Minutes = minutes
+
+    // Update element
     if (minutes < 10) {
         Minutes_Elem.value = '0' + minutes;
     } else {
@@ -26,7 +36,17 @@ function Set_Minutes(minutes) {
 /* Function to set the global seconds and also update the seconds element with 2 digits */
 function Set_Seconds(seconds) {
     seconds = parseInt(seconds)
+
+    // Validate seconds
+    if (seconds > 59) {
+        seconds = 59
+    }
+    if (seconds < 0) {
+        seconds = 0
+    }
     Seconds = seconds
+
+    // Update element
     if (seconds < 10) {
         Seconds_Elem.value = '0' + seconds;
     } else {
