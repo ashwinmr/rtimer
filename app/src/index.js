@@ -97,10 +97,6 @@ function Play_Pause() {
     }
 }
 
-// Handle events for each button
-Play_Pause_Button.addEventListener('click', Play_Pause)
-Reset_Button.addEventListener('click', Reset)
-
 // Update the globals when the time is changed by user. Also force 2 digits.
 Minutes_Elem.addEventListener('change', () => {
     Set_Minutes(Minutes_Elem.value)
@@ -111,3 +107,11 @@ Seconds_Elem.addEventListener('change', () => { Set_Seconds(Seconds_Elem.value) 
 // Reset and run update every second
 Reset()
 setInterval(Update, 1000)
+
+// Handle main process events
+ipcRenderer.on("Play_Pause", Play_Pause)
+ipcRenderer.on("Reset", Reset)
+
+// Add button shortcuts
+Play_Pause_Button.addEventListener('click', Play_Pause)
+Reset_Button.addEventListener('click', Reset)

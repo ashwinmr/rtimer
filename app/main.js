@@ -36,6 +36,21 @@ app.on('ready', function createWindow() {
             }, ]
         },
         {
+            label: 'Actions',
+            // Options to use the timer
+            submenu: [{
+                    label: 'Play/Pause',
+                    click() { win.webContents.send('Play_Pause') },
+                    accelerator: 'Ctrl+P'
+                },
+                {
+                    label: 'Reset',
+                    click() { win.webContents.send('Reset') },
+                    accelerator: 'Ctrl+R'
+                },
+            ]
+        },
+        {
             label: 'Help',
             // Allow opening browser dev tool
             submenu: [{
