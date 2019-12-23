@@ -16,7 +16,7 @@ app.on('ready', function createWindow() {
         icon: path.join(__dirname, 'assets', 'icons', 'main_icon.png'),
         resizable: false,
         useContentSize: true,
-        width: 450,
+        width: 400,
         height: 100,
         webPreferences: {
             nodeIntegration: true
