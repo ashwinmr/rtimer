@@ -7,8 +7,10 @@ body {
     height: 100%;
     width: 100%;
     margin: 0;
-    display: table;
+    display: flex;
     overflow: hidden;
+    justify-content: center;
+    align-items: center;
 }
 
 
@@ -62,12 +64,15 @@ button {
     background-color: #ffd800;
     background-position: center;
     background-repeat: no-repeat;
+    -webkit-mask-position: center;
+    -webkit-mask-repeat: no-repeat;
     cursor: pointer;
     border: none;
     outline: none;
     height: 50px;
     width: 50px;
     margin: 5px;
+    padding: 0;
 }
 
 
@@ -77,24 +82,12 @@ button:hover {
     background-color: #00ccff;
 }
 
-#reset_container {
-    display: table-cell;
-    vertical-align: middle;
-}
-
 #reset_button {
     -webkit-mask-image: url('../ui/reset_button.svg');
-    float: right;
-}
-
-#play_pause_container {
-    display: table-cell;
-    vertical-align: middle;
 }
 
 #play_pause_button {
     -webkit-mask-image: url('../ui/play_button.svg');
-    float: left;
 }
 
 
