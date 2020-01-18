@@ -41,7 +41,7 @@ app.on('ready', function createWindow() {
             submenu: [{
                     label: 'Play/Pause',
                     click() { win.webContents.send('Play_Pause') },
-                    accelerator: 'Ctrl+P'
+                    accelerator: 'Space'
                 },
                 {
                     label: 'Reset',

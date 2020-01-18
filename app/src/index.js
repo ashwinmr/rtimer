@@ -115,3 +115,11 @@ ipcRenderer.on("Reset", Reset)
 // Add button shortcuts
 Play_Pause_Button.addEventListener('click', Play_Pause)
 Reset_Button.addEventListener('click', Reset)
+
+// Prevent the space bar from triggering any button that is in focus
+document.addEventListener('keyup', (event) => {
+    if (event.which == 32) {
+        event.preventDefault()
+        console.log("Space pressed")
+    }
+})
