@@ -111,6 +111,10 @@ setInterval(Update, 1000)
 // Handle main process events
 ipcRenderer.on("Play_Pause", Play_Pause)
 ipcRenderer.on("Reset", Reset)
+ipcRenderer.on("Set_Timer", (e, time) => {
+    Set_Minutes(time)
+    Reset_Val = time
+})
 
 // Add button shortcuts
 Play_Pause_Button.addEventListener('click', Play_Pause)

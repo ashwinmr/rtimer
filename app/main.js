@@ -51,6 +51,39 @@ app.on('ready', function createWindow() {
             ]
         },
         {
+            label: 'Set',
+            // Set timer
+            submenu: [{
+                    label: '5',
+                    click() { win.webContents.send('Set_Timer', 5) },
+                },
+                {
+                    label: '10',
+                    click() { win.webContents.send('Set_Timer', 10) },
+                },
+                {
+                    label: '15',
+                    click() { win.webContents.send('Set_Timer', 15) },
+                },
+                {
+                    label: '20',
+                    click() { win.webContents.send('Set_Timer', 20) },
+                },
+                {
+                    label: '30',
+                    click() { win.webContents.send('Set_Timer', 30) },
+                },
+                {
+                    label: '45',
+                    click() { win.webContents.send('Set_Timer', 45) },
+                },
+                {
+                    label: '60',
+                    click() { win.webContents.send('Set_Timer', 60) },
+                },
+            ]
+        },
+        {
             label: 'Help',
             // Allow opening browser dev tool
             submenu: [{
