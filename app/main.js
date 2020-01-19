@@ -1,4 +1,4 @@
-const { app, BrowserWindow, Menu, Tray, ipcMain } = require('electron')
+const { app, BrowserWindow, Menu, Tray, ipcMain, shell } = require('electron')
 const path = require('path')
 const url = require('url')
 
@@ -41,12 +41,45 @@ app.on('ready', function createWindow() {
             submenu: [{
                     label: 'Play/Pause',
                     click() { win.webContents.send('Play_Pause') },
-                    accelerator: 'Ctrl+P'
+                    accelerator: 'Space'
                 },
                 {
                     label: 'Reset',
                     click() { win.webContents.send('Reset') },
                     accelerator: 'Ctrl+R'
+                },
+            ]
+        },
+        {
+            label: 'Set',
+            // Set timer
+            submenu: [{
+                    label: '5',
+                    click() { win.webContents.send('Set_Timer', 5) },
+                },
+                {
+                    label: '10',
+                    click() { win.webContents.send('Set_Timer', 10) },
+                },
+                {
+                    label: '15',
+                    click() { win.webContents.send('Set_Timer', 15) },
+                },
+                {
+                    label: '20',
+                    click() { win.webContents.send('Set_Timer', 20) },
+                },
+                {
+                    label: '30',
+                    click() { win.webContents.send('Set_Timer', 30) },
+                },
+                {
+                    label: '45',
+                    click() { win.webContents.send('Set_Timer', 45) },
+                },
+                {
+                    label: '60',
+                    click() { win.webContents.send('Set_Timer', 60) },
                 },
             ]
         },
@@ -60,6 +93,13 @@ app.on('ready', function createWindow() {
                     visible: Debug.DevTool,
                     click() {
                         win.webContents.toggleDevTools()
+                    }
+                },
+                {
+                    label: 'Privacy Policy',
+                    click() {
+                        let link = 'https://raotech3.blogspot.com/2019/12/rtimer-privacy-policy.html'
+                        shell.openExternal(link)
                     }
                 },
                 {
